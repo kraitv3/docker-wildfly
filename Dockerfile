@@ -13,13 +13,10 @@ RUN cd /opt \
 	&& rm wildfly-$WILDFLY_VERSION.tar.gz
 
 #Create admin user
-RUN $JBOSS_HOME/bin/add-user.sh admin admin123 --silent
-
-#Add configuration with JVM debug options
-COPY standalone.conf /opt/wildfly/bin
+RUN $JBOSS_HOME/bin/add-user.sh admin admin --silent
 
 VOLUME $JBOSS_HOME/standalone/deployments
 
 EXPOSE 8080 8787 9990
 
-CMD ["/opt/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
+CMD ["/opt/wildfly/bin/standalone.sh", "--debug", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
