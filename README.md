@@ -9,7 +9,7 @@ This image extends [kraitv3/ubuntu-jdk](https://hub.docker.com/r/kraitv3/ubuntu-
 
 ## Supported Tags ##
 
-`10.1.0.Final`, `11.0.0.Final`, `latest` [*(Dockerfile)*](https://github.com/kraitv3/docker-wildfly/blob/master/Dockerfile)
+`10.1.0.Final`, `11.0.0.Final`, `12.0.0.Final`, `latest` [*(Dockerfile)*](https://github.com/kraitv3/docker-wildfly/blob/master/Dockerfile)
 
 ## Running the Image ##
 
